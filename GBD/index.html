@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>GBD - Good Brand Doors</title>
+   <link rel="icon" type="image/png" href="GBD Enterprises logo design.png">
+
+  <style>
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f4f7fb;
+  color:#333;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+  width:100%;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  position:fixed;
+  top:0;
+  z-index:1000;
+}
+
+header h1{
+  color:#fff;
+  font-size:32px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-size:16px;
+  font-weight:500;
+  transition:0.3s;
+  position:relative;
+}
+
+nav a::after{
+  content:'';
+  width:0%;
+  height:2px;
+  background:#ff9800;
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* HERO SECTION */
+
+.hero{
+  width:100%;
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+  url('https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero-content{
+  max-width:900px;
+  animation:fadeIn 1.5s ease;
+}
+
+.hero-content h2{
+  font-size:64px;
+  color:#fff;
+  margin-bottom:20px;
+  line-height:1.2;
+}
+
+.hero-content p{
+  font-size:22px;
+  color:#ddd;
+  margin-bottom:35px;
+}
+
+.btn{
+  display:inline-block;
+  padding:15px 35px;
+  background:linear-gradient(45deg,#ff9800,#ff5722);
+  color:white;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:600;
+  transition:0.4s;
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 25px rgba(0,0,0,0.4);
+}
+
+/* SECTIONS */
+
+section{
+  padding:100px 8%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:42px;
+  color:#0d47a1;
+  margin-bottom:60px;
+  position:relative;
+}
+
+.section-title::after{
+  content:'';
+  width:80px;
+  height:4px;
+  background:#ff9800;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:-15px;
+  border-radius:5px;
+}
+
+/* ABOUT */
+
+.about{
+  background:white;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about p{
+  font-size:18px;
+  line-height:1.9;
+  color:#555;
+  text-align:justify;
+}
+
+/* SERVICES */
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.service-card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  transition:0.4s;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  position:relative;
+  overflow:hidden;
+}
+
+.service-card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+  background:linear-gradient(90deg,#ff9800,#ff5722);
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+}
+
+.service-card h3{
+  color:#0d47a1;
+  margin-bottom:20px;
+  font-size:24px;
+}
+
+.service-card p{
+  color:#666;
+  line-height:1.8;
+  font-size:16px;
+  text-align:justify;
+}
+
+/* CONTACT */
+
+.contact{
+  background:
+  linear-gradient(rgba(13,71,161,0.92), rgba(13,71,161,0.92)),
+  url('https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  border-radius:25px;
+  text-align:center;
+}
+
+.contact .section-title{
+  color:white;
+}
+
+.contact p{
+  font-size:20px;
+  margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#0b0b0b;
+  color:#bbb;
+  text-align:center;
+  padding:25px;
+  font-size:15px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:65px;
+  height:65px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  z-index:999;
+  transition:0.3s;
+}
+
+.whatsapp:hover{
+  transform:scale(1.1);
+}
+
+.whatsapp img{
+  width:38px;
+  height:38px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    padding:15px 20px;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  nav a{
+    margin:0 10px;
+    font-size:14px;
+  }
+
+  .hero-content h2{
+    font-size:40px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+  .section-title{
+    font-size:32px;
+  }
+
+  section{
+    padding:70px 20px;
+  }
+
+  .about p,
+  .service-card p{
+    font-size:15px;
+  }
+
+  .service-card{
+    padding:25px;
+  }
+
+  .contact p{
+    font-size:17px;
+  }
+
+  .whatsapp{
+    width:58px;
+    height:58px;
+    right:18px;
+    bottom:18px;
+  }
+
+  .whatsapp img{
+    width:32px;
+    height:32px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>GBD</h1>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Good Brand Doors</h2>
+      <p>Professional UPVC Installation and Services</p>
+
+      <a href="#contact" class="btn">Get Free Consultation</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+  <h2 class="section-title">About Us</h2>
+
+  <p>
+    Welcome to <strong>GBD (Good Brand Doors)</strong>, your trusted partner
+    for premium UPVC door and window installation services in
+    Thiruvottiyur and nearby areas. We specialize in delivering modern,
+    durable, and stylish UPVC solutions for residential, commercial,
+    and industrial spaces.
+  </p>
+
+  <br><br>
+
+  <p>
+    With a strong commitment to quality workmanship and customer
+    satisfaction, GBD provides complete installation, replacement,
+    maintenance, and repair services using high-grade materials and
+    advanced installation techniques. Our experienced team ensures
+    every project is completed with precision, safety, and long-lasting
+    performance.
+  </p>
+
+  <br><br>
+
+  <p>
+    UPVC products are known for their weather resistance, low
+    maintenance, thermal insulation, sound reduction, and elegant
+    appearance. At GBD, we help customers choose the right solutions
+    that improve both the beauty and functionality of their property.
+  </p>
+
+  <br><br>
+
+  <p>
+    Whether you are building a new home, renovating your office,
+    upgrading old wooden frames, or looking for secure and modern door
+    systems, GBD offers customized solutions that perfectly match your
+    requirements and budget.
+  </p>
+</section>
+
+  <!-- SERVICES SECTION -->
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+
+  <div class="services">
+
+    <div class="service-card">
+      <h3>UPVC Door Installation</h3>
+
+      <p>
+        We provide professional installation of premium-quality UPVC
+        doors for homes, apartments, offices, and commercial buildings.
+        Our doors are designed for durability, security, smooth
+        operation, and elegant appearance. We offer sliding doors,
+        casement doors, bathroom doors, and customized designs based
+        on customer requirements.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>UPVC Window Solutions</h3>
+
+      <p>
+        Enhance your property with stylish and energy-efficient UPVC
+        windows. We install sliding windows, openable windows,
+        ventilators, and custom window systems that provide better
+        ventilation, noise reduction, weather protection, and easy
+        maintenance.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Maintenance & Repair Services</h3>
+
+      <p>
+        GBD offers reliable maintenance and repair solutions for all
+        types of UPVC doors and windows. From lock replacement and
+        hinge adjustments to track servicing and damaged panel repairs,
+        our technicians ensure smooth functionality and long-lasting
+        performance.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Customized UPVC Designs</h3>
+
+      <p>
+        Every property is unique, and we provide customized UPVC
+        solutions tailored to your space, design preferences, and
+        budget. Our team works closely with customers to create modern,
+        space-saving, and attractive installations that complement
+        interiors and exteriors.
+      </p>
+    </div>
+
+   
+
+    <!-- <div class="service-card">
+      <h3>Consultation & Site Inspection</h3>
+
+      <p>
+        Not sure which UPVC solution is best for your property? GBD
+        provides expert consultation and on-site inspection services to
+        help customers choose the most suitable products based on
+        design, functionality, ventilation, and budget requirements.
+      </p>
+    </div> -->
+
+  </div>
+</section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title" style="color:white;">Contact Us</h2>
+
+    <p><strong>Phone:</strong> 7358368105</p>
+    <p><strong>Email:</strong> yuvarajbala2001@gmail.com</p>
+    <p><strong>Location:</strong> Thiruvottiyur,Chennai</p>
+
+    <a href="tel:7358368105" class="btn">Call Now</a>
+  </section>
+
+  <footer>
+    <p>© 2026 GBD - Good Brand Doors. All Rights Reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917358368105"
+   class="whatsapp"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp">
+</a>
+
+</body>
+</html>
